@@ -1,3 +1,9 @@
+/**
+* @file Geometria.h
+* @author Gerson David da Silva Santos
+* @date 22/04/2018
+*/
+
 #ifndef GEOMETRIA_H
 #define GEOMETRIA_H
 

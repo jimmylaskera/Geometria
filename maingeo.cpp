@@ -1,9 +1,23 @@
+/**
+* @file maingeo.cpp
+* @brief O programa calcula a área, perímetro ou volume de figuras geométricas. Para mais informações, execute o programa sem argumentos na linha de comando.
+* @author Gerson David da Silva Santos
+* @date 22/04/2018
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
 #include "Geometria.h"
 using namespace std;
 
+/**
+* @brief Funcao principal
+* @details O programa receberá a forma geométrica desejada e suas medidas e retornará, caso uma figura plana, a área e perímetro; ou caso um objeto espacial, a área e o volume.
+* Executar o programa sem informações adicionais imprimirá instruções de como usar o programa.
+* @param argc Quantidade de argumentos fornecidos pela linha de comando
+* @param argv Vetor de argumentos inseridos via linha de comando
+*/
 int main (int argc, char* argv[])
 {
 	double temp = 0;
