@@ -97,7 +97,7 @@ double Cubo::areaCubo(double b) {
 	return 6 * (b * b);
 }
 
-double volumeCubo(double b) {
+double Cubo::volumeCubo(double b) {
 	return pow(b, 3);
 }
 
