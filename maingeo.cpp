@@ -8,7 +8,7 @@ int main (int argc, char* argv[])
 {
 	double temp = 0;
 
-	if (argc == 0) {
+	if (argc == 1) {
 		cout << "Este programa calcula informacoes basicas de formas geometricas presentes na Geometria plana e espacial. Para utiliza-lo, execute-o digitando a forma desejada, e suas dimensoes. O programa ira retornar os valores para area e perimetro da figura, caso seja uma forma plana, ou area e volume do objeto, caso seja uma forma espacial." << endl;
 		cout << "Estas sao as formas disponiveis e as informacoes requeridas:" << endl << endl;
 		cout << "'triangulo': recebe sua LARGURA, retorna sua area e perimetro. Tenha em mente que o triangulo representado e equilatero." << endl;
