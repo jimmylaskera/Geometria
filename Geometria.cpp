@@ -77,11 +77,11 @@ Piramide::Piramide(double b) {
 }
 
 double Piramide::areaPrm(double b, double l, double h) {
-	return Quadrado.areaQ(b) + 4 * Triangulo.areaT(l, h);
+	return (b * b) + 4 * ((l * h) / 2);
 }
 
 double Piramide::volumePrm(double b, double h) {
-	return (Quadrado.areaQ(b) * h) / 3;
+	return ((b * b) * h) / 3;
 }
 
 
@@ -90,11 +90,11 @@ double Piramide::volumePrm(double b, double h) {
 Cubo::Cubo() {}
 
 Cubo::Cubo(double b) {
-	base.lado = b;
+	base = b;
 }
 
 double Cubo::areaCubo(double b) {
-	return 6 * Quadrado.areaQ(b);
+	return 6 * (b * b);
 }
 
 double volumeCubo(double b) {
@@ -112,7 +112,7 @@ Paralelepipedo::Paralelepipedo(double l, double h, double c) {
 }
 
 double Paralelepipedo::areaPrl(double l, double h, double c) {
-	return 2*Retangulo.areaR(l, h) + 2*Retangulo.areaR(l, c) + 2*Retangulo.areaR(h, c);
+	return 2*(l*h) + 2*(l*c) + 2*(h*c);
 }
 
 double Paralelepipedo::volumePrl(double l, double h, double c) {
