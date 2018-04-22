@@ -9,8 +9,8 @@ $(PROG) : $(OBJS)
 main.o:
 	$(CC) maingeo.cpp -c $(CPPFLAGS)
 
-geometria.o: geometria.h
-	$(CC) geometria.cpp -c $(CPPFLAGS)
+geometria.o: Geometria.h
+	$(CC) Geometria.cpp -c $(CPPFLAGS)
 
 clean:
 	rm -f core $(PROG) $(OBJS)
