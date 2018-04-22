@@ -6,6 +6,8 @@ using namespace std;
 
 int main (int argc, char* argv[])
 {
+	double temp = 0;
+
 	if (argc == 0) {
 		cout << "Este programa calcula informacoes basicas de formas geometricas presentes na Geometria plana e espacial. Para utiliza-lo, execute-o digitando a forma desejada, e suas dimensoes. O programa ira retornar os valores para area e perimetro da figura, caso seja uma forma plana, ou area e volume do objeto, caso seja uma forma espacial." << endl;
 		cout << "Estas sao as formas disponiveis e as informacoes requeridas:" << endl << endl;
@@ -20,50 +22,82 @@ int main (int argc, char* argv[])
 	} else {
 		if (strcmp(argv[1], "triangulo") == 0) {
 			Triangulo t( atof(argv[2]) );
-			cout << "Area do triangulo: " << Triangulo.areaT(t.largura, t.altura) << endl;
-			cout << "Perimetro do triangulo: " << Triangulo.perimetroT(t.largura, t.altura) << endl;
+
+			temp = t.areaT(t.largura, t.altura);
+			cout << "Area do triangulo: " << temp << endl;
+
+			temp = t.perimetroT(t.largura);
+			cout << "Perimetro do triangulo: " << temp << endl;
 		}
 
 		if (strcmp(argv[1], "retangulo") == 0) {
 			Retangulo r( atof(argv[2]) , ( atof(argv[3]) ));
-			cout << "Area do retangulo: " << Retangulo.areaR(r.largura, r.altura) << endl;
-			cout << "Perimetro do retangulo: " << Retangulo.perimetroR(r.largura, r.altura) << endl;
+
+			temp = r.areaR(r.largura, r.altura);
+			cout << "Area do retangulo: " << temp << endl;
+
+			temp = r.perimetroR(r.largura, r.altura);
+			cout << "Perimetro do retangulo: " << temp << endl;
 		}
 
 		if (strcmp(argv[1], "quadrado") == 0) {
 			Quadrado q( atof(argv[2]) );
-			cout << "Area do quadrado: " << Quadrado.areaQ(q.lado) << endl;
-			cout << "Perimetro do quadrado: " << Quadrado.perimetroQ(q.lado) << endl;
+
+			temp = q.areaQ(q.lado);
+			cout << "Area do quadrado: " << temp << endl;
+
+			temp = q.perimetroQ(q.lado);
+			cout << "Perimetro do quadrado: " << temp << endl;
 		}
 
 		if (strcmp(argv[1], "circulo") == 0) {
 			Circulo c( atof(argv[2]) );
-			cout << "Area do circulo: " << Circulo.areaC(c.raio) << endl;
-			cout << "Perimetro do circulo: " << Circulo.perimetroC(c.raio) << endl;
+
+			temp = c.areaC(c.raio);
+			cout << "Area do circulo: " << temp << endl;
+
+			temp = c.perimetroC(c.raio);
+			cout << "Perimetro do circulo: " << temp << endl;
 		}
 
 		if (strcmp(argv[1], "piramide") == 0) {
 			Piramide prm( atof(argv[2]) );
-			cout << "Area da piramide: " << Piramide.areaPrm(prm.base, prm.lateral.largura, prm.lateral.altura) << endl;
-			cout << "Volume da piramide: " << Piramide.volumePrm(prm.base, prm.lateral.altura) << endl;
+
+			temp = prm.areaPrm(prm.base, prm.lateral.largura, prm.lateral.altura);
+			cout << "Area da piramide: " << temp << endl;
+
+			temp = prm.volumePrm(prm.base, prm.lateral.altura);
+			cout << "Volume da piramide: " << temp << endl;
 		}
 
 		if (strcmp(argv[1], "cubo") == 0) {
 			Cubo cube( atof(argv[2]) );
-			cout << "Area do cubo: " << Cubo.areaCubo(cube.base) << endl;
-			cout << "Volume do cubo: " << Cubo.volumeCubo(cube.base) << endl;
+
+			temp = cube.areaCubo(cube.base);
+			cout << "Area do cubo: " << temp << endl;
+
+			temp = cube.volumeCubo(cube.base);
+			cout << "Volume do cubo: " << temp << endl;
 		}
 
 		if (strcmp(argv[1], "paralelepipedo") == 0) {
 			Paralelepipedo prl( atof(argv[2]), atof(argv[3]), atof(argv[4]) ) ;
-			cout << "Area do paralelepipedo: " << Paralelepipedo.areaPrl(prl.largura, prl.altura, prl.comprimento) << endl;
-			cout << "Volume do paralelepipedo: " << Paralelepipedo.volumePrl(prl.largura, prl.altura, prl.comprimento) << endl;
+			
+			temp = prl.areaPrl(prl.largura, prl.altura, prl.comprimento);
+			cout << "Area do paralelepipedo: " << temp << endl;
+
+			temp = prl.volumePrl(prl.largura, prl.altura, prl.comprimento);
+			cout << "Volume do paralelepipedo: " << temp << endl;
 		}
 
 		if (strcmp(argv[1], "esfera") == 0) {
 			Esfera esf( atof(argv[2]) );
-			cout << "Area da esfera: " << Esfera.areaEsf(esf.raio) << endl;
-			cout << "Volume da esfera: " << Esfera.volumeEsf(esf.raio) << endl;
+
+			temp = esf.areaEsf(esf.raio);
+			cout << "Area da esfera: " << temp << endl;
+
+			temp = esf.volumeEsf(esf.raio);
+			cout << "Volume da esfera: " << temp << endl;
 		}
 	}
 
